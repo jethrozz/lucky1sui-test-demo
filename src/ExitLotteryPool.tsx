@@ -80,7 +80,11 @@ export function ExitLotteryPool({ onClose, onExitSuccess }: Props) {
                         style={{ marginRight: '8px' }}
                     />
                     <Avatar src={object.data?.display?.data.image_url} alt="NFT" fallback="NFT" />
-                    <Text className="ml-2">{object.data?.content?.fields.ticket_number_set[0]}</Text>
+                    {object.data?.content && 'fields' in object.data.content ? (
+                        <Text className="ml-2">{(object.data.content as any).fields.ticket_number_set[0]}</Text>
+                    ) : (
+                        <Text className="ml-2">No ticket number available</Text>
+                    )}
                 </Flex>
             ))}
             
