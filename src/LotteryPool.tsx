@@ -238,13 +238,17 @@ function getPoolInfo(data: SuiObjectData | undefined | null):{name: string, no: 
 
     let { name, no, user_deposit } = data.content.fields as any;
     let list = user_deposit.fields.contents;
-    let total_deposit = 0;
+    let total_deposit: number = 0;
     let total_participants = list.length;
     for (let i = 0; i < list.length; i++) {
         let { fields } = list[i];
         let { value } = fields;
-        total_deposit+=value;
+        total_deposit = total_deposit + (parseInt(value) as number);
     }
+    console.log("total_deposit before division:", total_deposit, "type:", typeof total_deposit);
+
     total_deposit = total_deposit / 1_000_000_000;
+    console.log("total_deposit after division:", total_deposit);
+
     return {name, no, total_deposit, total_participants};
 }   
