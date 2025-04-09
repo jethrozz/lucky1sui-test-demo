@@ -19,10 +19,10 @@ function App() {
   console.log("lottery:",data);
 
   useEffect(() => {
-    if (data.data?.content && 'fields' in data.data.content) {
+    if (!isPending && data.data?.content) {
       setLotteryPoolId((data.data.content as any).fields.lottery_pool_id as string);
     }
-  }, [data]);
+  }, [isPending,data]);
   return (
     <>
       <Flex
