@@ -6,7 +6,6 @@ import {
   RANDOM_ID,
   TICKET_POOL_ID,
   CLOCK_ID,
-  LOTTERY_POOL_ID,
   
 } from "./constants.ts";
 import { createNetworkConfig } from "@mysten/dapp-kit";
@@ -21,9 +20,7 @@ const { networkConfig, useNetworkVariable, useNetworkVariables } =
         lotteryId: LOTTERY_ID,
         ticketPoolId: TICKET_POOL_ID,
         clockId: CLOCK_ID,
-        randomId: RANDOM_ID,
-        lotteryPoolId: LOTTERY_POOL_ID
-      },
+        randomId: RANDOM_ID,      },
     },
     testnet: {
       url: getFullnodeUrl("testnet"),
@@ -34,8 +31,6 @@ const { networkConfig, useNetworkVariable, useNetworkVariables } =
         ticketPoolId: TICKET_POOL_ID,
         clockId: CLOCK_ID,
         randomId: RANDOM_ID,
-        lotteryPoolId: LOTTERY_POOL_ID
-
       },
     },
     mainnet: {
@@ -45,9 +40,7 @@ const { networkConfig, useNetworkVariable, useNetworkVariables } =
         lotteryId: LOTTERY_ID,
         ticketPoolId: TICKET_POOL_ID,
         clockId: CLOCK_ID,
-        randomId: RANDOM_ID,
-        lotteryPoolId: LOTTERY_POOL_ID
-      },
+        randomId: RANDOM_ID,      },
     },
   });
 
