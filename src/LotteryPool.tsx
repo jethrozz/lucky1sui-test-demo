@@ -180,7 +180,7 @@ export function LotteryPool({ lotteryPoolId }: { lotteryPoolId: string }) {
         <div>
 
             <Heading size="3">{poolinfo.name} 第{poolinfo.no}期</Heading>
-            <Heading size="3">当前奖池总参与人数 : {poolinfo.total_participants}，总奖池金额 : {poolinfo.total_deposit} sui</Heading>
+            <Heading size="3">当前奖池总参与地址数 : {poolinfo.total_participants}，总奖池金额 : {poolinfo.total_deposit} sui</Heading>
 
             <Flex direction="column" gap="2">
 
